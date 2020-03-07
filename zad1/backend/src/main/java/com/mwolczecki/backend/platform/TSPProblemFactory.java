@@ -19,7 +19,10 @@ public class TSPProblemFactory {
         String crossingAlgorithmString = map.get("crossingAlgorithm");
         String mutationAlgorithmString = map.get("mutationAlgorithm");
         String selectionAlgorithmString = map.get("selectionAlgorithm");
-        int tour = Integer.parseInt(map.get("tour"));
+        int tour = 1;
+        if(map.get("tour") != null) {
+            tour = Integer.parseInt(map.get("tour"));
+        }
         int pop_size = Integer.parseInt(map.get("pop_size"));
         int generations = Integer.parseInt(map.get("generations"));
         double Px = Double.parseDouble(map.get("Px"));
@@ -61,7 +64,7 @@ public class TSPProblemFactory {
             case "INVERSE":
                 return new InversionMutation();
             default:
-                return new InversionMutation();
+                return null;
         }
 
     }
@@ -75,7 +78,7 @@ public class TSPProblemFactory {
             case "PMX":
                 return new PartiallyMatchedCrossover();
             default:
-                return new OrderedCrossover();
+                return null;
         }
     }
 }

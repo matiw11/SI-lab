@@ -5,7 +5,7 @@ import MyChart from "./MyChart";
 class Tsp extends Component {
     state = {
         fileNames: [],
-        mutationAlgorithms: [
+        crossingAlgorithms: [
             {name: "partially matched crossover", value: "PMX"},
             {name: "cycle crossover", value: "CX"},
             {name: "ordered crossover", value: "OX"}
@@ -14,7 +14,7 @@ class Tsp extends Component {
             {name: "tournament", value: "TOUR"},
             {name: "roulette", value: "ROUL"}
         ],
-        crossingAlgorithms: [
+        mutationAlgorithms: [
             {name: "swap", value: "SWAP"},
             {name: "inverse", value: "INVERSE"}
         ]
@@ -76,7 +76,7 @@ class Tsp extends Component {
         axios.post('http://localhost:8080/runProblem', {
             crossingAlgorithm: state.crossingAlgorithm,
             mutationAlgorithm: state.mutationAlgorithm,
-            selectionAlgorithm: this.state.mutationAlgorithm,
+            selectionAlgorithm: this.state.selectionAlgorithm,
             tour: this.state.tour,
             pop_size: this.state.pop_size,
             generations: this.state.generations,

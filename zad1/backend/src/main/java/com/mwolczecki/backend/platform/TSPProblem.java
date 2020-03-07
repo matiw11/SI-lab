@@ -89,7 +89,11 @@ public class TSPProblem {
     private List<Individual> initialize() {
         List<Individual> population = new ArrayList<>();
         for (int i = 0; i < pop_size; i++) {
-            population.add(Individual.createRandomIndividual(tspCoordinates.coords.size()));
+            if(Math.random()>0.5) {
+                population.add(Individual.createRandomIndividual(tspCoordinates.coords.size()));
+            }else{
+                population.add(Individual.createGreedyIndividual(tspCoordinates, (int) (Math.random()*tspCoordinates.coords.size())));
+            }
         }
         return population;
     }
