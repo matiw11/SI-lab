@@ -1,7 +1,13 @@
 package com.mwolczecki.backend.platform;
 
+import com.mwolczecki.backend.platform.crossing.CrossingAlgorithm;
+import com.mwolczecki.backend.platform.crossing.CycleCrossover;
+import com.mwolczecki.backend.platform.crossing.OrderedCrossover;
+import com.mwolczecki.backend.platform.crossing.PartiallyMatchedCrossover;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -12,7 +18,16 @@ public class TSPParser {
     public static final int GEO = 2;
 
     public static void main(String[] args) {
-        
+        TSPParser tspParser = new TSPParser();
+        TSPCoordinates parse = tspParser.parse("berlin11_modified.tsp");
+        int fileType = tspParser.fileType;
+        Individual greedyIndividual = Individual.createRandomIndividual(11);
+        Individual greedyIndividual1 = Individual.createRandomIndividual(11);
+        System.out.println(greedyIndividual.citiesIndexes);
+        System.out.println(greedyIndividual1.citiesIndexes);
+        CrossingAlgorithm crossingAlgorithm = new CycleCrossover();
+        Individual cross = crossingAlgorithm.cross(greedyIndividual, greedyIndividual1);
+        System.out.println(cross.citiesIndexes);
 
 
     }

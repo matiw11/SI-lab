@@ -5,8 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Individual {
-    List<Integer> citiesIndexes = new ArrayList<>();
+public class Individual implements Cloneable {
+    public List<Integer> citiesIndexes = new ArrayList<>();
 
     public static Individual createRandomIndividual(int length) {
         Individual individual = new Individual();
@@ -55,6 +55,13 @@ public class Individual {
             sum+=tspCoordinates.calculateDistance(citiesIndexes.get(i), citiesIndexes.get(i+1));
         }
         return sum;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Individual individual = new Individual();
+        individual.citiesIndexes = new ArrayList<>(this.citiesIndexes);
+        return individual;
     }
 
     private Individual() {
