@@ -17,6 +17,11 @@ class Tsp extends Component {
         mutationAlgorithms: [
             {name: "swap", value: "SWAP"},
             {name: "inverse", value: "INVERSE"}
+        ],
+        initializers: [
+            {name: "random", value: "RANDOM"},
+            {name: "greedy", value: "GREEDY"},
+            {name: "mixed", value: "MIXED"}
         ]
     }
 
@@ -56,6 +61,11 @@ class Tsp extends Component {
                     <option disabled selected></option>
                     {this.state.mutationAlgorithms.map(item => (<option value={item.value}>{item.name}</option>))}
                 </select>
+                Inicjalizer:
+                <select id="initializer" onChange={e => this.setState({initializer: e.target.value})}>
+                    <option disabled selected></option>
+                    {this.state.initializers.map(item => (<option value={item.value}>{item.name}</option>))}
+                </select>
                 <br/>
                 {this.state.selectionAlgorithm === "TOUR" && <i>tour:
                     <input type={'number'} onChange={e => this.setState({tour: e.target.value})}/></i>}
@@ -82,7 +92,8 @@ class Tsp extends Component {
             generations: this.state.generations,
             Px: this.state.Px,
             Pm: this.state.Pm,
-            fileName: this.state.fileName
+            fileName: this.state.fileName,
+            initializer: this.state.initializer
         }, {
             headers: {
                 'Access-Control-Allow-Origin': '*'

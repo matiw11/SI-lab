@@ -2,6 +2,7 @@ package com.mwolczecki.backend.platform;
 
 import com.mwolczecki.backend.platform.crossing.CrossingAlgorithm;
 import com.mwolczecki.backend.platform.crossing.OrderedCrossover;
+import com.mwolczecki.backend.platform.initializer.Initializer;
 import com.mwolczecki.backend.platform.mutation.InversionMutation;
 import com.mwolczecki.backend.platform.mutation.MutationAlogirthm;
 import com.mwolczecki.backend.platform.selection.SelectionAlgorithm;
@@ -20,6 +21,7 @@ public class TSPProblem {
     double PM;
     TSPCoordinates tspCoordinates;
     private List<Evaluation> evaluations = new ArrayList<>();
+    Initializer initializer;
 
     public static void main(String[] args) {
         TSPProblem tspProblem = new TSPProblem();
@@ -89,11 +91,7 @@ public class TSPProblem {
     private List<Individual> initialize() {
         List<Individual> population = new ArrayList<>();
         for (int i = 0; i < pop_size; i++) {
-            if(Math.random()>0.5) {
-                population.add(Individual.createRandomIndividual(tspCoordinates.coords.size()));
-            }else{
-                population.add(Individual.createGreedyIndividual(tspCoordinates, (int) (Math.random()*tspCoordinates.coords.size())));
-            }
+            population.add(initializer.initialize(tspCoordinates));
         }
         return population;
     }
