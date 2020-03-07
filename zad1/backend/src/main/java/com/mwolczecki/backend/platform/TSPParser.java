@@ -4,6 +4,8 @@ import com.mwolczecki.backend.platform.crossing.CrossingAlgorithm;
 import com.mwolczecki.backend.platform.crossing.CycleCrossover;
 import com.mwolczecki.backend.platform.crossing.OrderedCrossover;
 import com.mwolczecki.backend.platform.crossing.PartiallyMatchedCrossover;
+import com.mwolczecki.backend.platform.mutation.InversionMutation;
+import com.mwolczecki.backend.platform.mutation.SwapMutation;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -22,12 +24,10 @@ public class TSPParser {
         TSPCoordinates parse = tspParser.parse("berlin11_modified.tsp");
         int fileType = tspParser.fileType;
         Individual greedyIndividual = Individual.createRandomIndividual(11);
-        Individual greedyIndividual1 = Individual.createRandomIndividual(11);
         System.out.println(greedyIndividual.citiesIndexes);
-        System.out.println(greedyIndividual1.citiesIndexes);
-        CrossingAlgorithm crossingAlgorithm = new CycleCrossover();
-        Individual cross = crossingAlgorithm.cross(greedyIndividual, greedyIndividual1);
-        System.out.println(cross.citiesIndexes);
+        SwapMutation inversionMutation = new SwapMutation();
+        Individual mutate = inversionMutation.mutate(greedyIndividual);
+        System.out.println(mutate.citiesIndexes);
 
 
     }
