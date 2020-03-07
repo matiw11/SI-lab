@@ -1,21 +1,14 @@
 package com.mwolczecki.backend.platform;
 
-import ch.qos.logback.classic.boolex.EvaluatorTemplate;
 import com.mwolczecki.backend.platform.crossing.CrossingAlgorithm;
-import com.mwolczecki.backend.platform.crossing.CycleCrossover;
 import com.mwolczecki.backend.platform.crossing.OrderedCrossover;
-import com.mwolczecki.backend.platform.crossing.PartiallyMatchedCrossover;
 import com.mwolczecki.backend.platform.mutation.InversionMutation;
 import com.mwolczecki.backend.platform.mutation.MutationAlogirthm;
-import com.mwolczecki.backend.platform.mutation.SwapMutation;
-import com.mwolczecki.backend.platform.selection.RouletteSelection;
 import com.mwolczecki.backend.platform.selection.SelectionAlgorithm;
 import com.mwolczecki.backend.platform.selection.TournamentSelection;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class TSPProblem {
     CrossingAlgorithm crossingAlgorithm;
@@ -43,7 +36,7 @@ public class TSPProblem {
     }
 
 
-    public void run() {
+    public List<Evaluation> run() {
         evaluations = new ArrayList<>();
         List<Individual> population = initialize();
         Evaluation evaluation1 = evaluate(population);
@@ -58,7 +51,7 @@ public class TSPProblem {
             evaluations.add(evaluate);
             population = crossedIndividuals;
         }
-
+    return evaluations;
     }
 
     private List<Individual> cross(List<Individual> selectedIndividuals) {
