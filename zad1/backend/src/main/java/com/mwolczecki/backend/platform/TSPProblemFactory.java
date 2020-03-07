@@ -24,7 +24,7 @@ public class TSPProblemFactory {
         int generations = Integer.parseInt(map.get("generations"));
         double Px = Double.parseDouble(map.get("Px"));
         double Pm = Double.parseDouble(map.get("Pm"));
-        String fileName = map.get("fileName");
+        String fileName = map.get("fileName")+".tsp";
         TSPCoordinates coordinates = new TSPParser().parse(fileName);
         CrossingAlgorithm crossingAlgorithm = getCrossingAlgorithm(crossingAlgorithmString);
         MutationAlogirthm mutationAlogirthm = getMutationAlgorithm(mutationAlgorithmString);
