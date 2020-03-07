@@ -27,21 +27,26 @@ public class TSPParser {
         TSPParser tspParser = new TSPParser();
         TSPCoordinates parse = tspParser.parse("berlin11_modified.tsp");
         int fileType = tspParser.fileType;
+
         Individual greedyIndividual1 = Individual.createRandomIndividual(11);
         System.out.println(greedyIndividual1.citiesIndexes);
         System.out.println(greedyIndividual1.calculateRoute(parse));
-
-
         Individual greedyIndividual2 = Individual.createRandomIndividual(11);
         System.out.println(greedyIndividual2.citiesIndexes);
         System.out.println(greedyIndividual2.calculateRoute(parse));
-        Individual greedyIndividual = Individual.createRandomIndividual(11);
-        System.out.println(greedyIndividual.citiesIndexes);
-        System.out.println(greedyIndividual.calculateRoute(parse));
+        Individual greedyIndividual3 = Individual.createRandomIndividual(11);
+        System.out.println(greedyIndividual3.citiesIndexes);
+        System.out.println(greedyIndividual3.calculateRoute(parse));
+        Individual greedyIndividual4 = Individual.createRandomIndividual(11);
+        System.out.println(greedyIndividual4.citiesIndexes);
+        System.out.println(greedyIndividual4.calculateRoute(parse));
+        Individual greedyIndividual5 = Individual.createGreedyIndividual(parse, 5);
+        System.out.println(greedyIndividual5.citiesIndexes);
+        System.out.println(greedyIndividual5.calculateRoute(parse));
 
-        List<Individual> individuals = List.of(greedyIndividual1, greedyIndividual2, greedyIndividual);
-        SelectionAlgorithm algorithm = new RouletteSelection();
-        Individual select = algorithm.select(individuals, parse);
+        SelectionAlgorithm selectionAlgorithm = new RouletteSelection();
+        List<Individual> greedyIndividual11 = List.of(greedyIndividual1, greedyIndividual2, greedyIndividual3, greedyIndividual4,greedyIndividual5);
+        Individual select = selectionAlgorithm.select(greedyIndividual11, parse);
         System.out.println(select.citiesIndexes);
 
 

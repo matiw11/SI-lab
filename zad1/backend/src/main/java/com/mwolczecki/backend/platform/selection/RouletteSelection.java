@@ -11,12 +11,12 @@ public class RouletteSelection implements SelectionAlgorithm {
         double sum =0;
         for(Individual individual: individuals){
             //left for scaling
-            sum+= 1/Math.pow(individual.calculateRoute(coordinates),1);
+            sum+= 1/Math.pow(individual.calculateRoute(coordinates),10);
         }
         double random = Math.random()*sum;
         double sum2 =0;
         for(Individual individual: individuals){
-            sum2+= 1/Math.pow(individual.calculateRoute(coordinates),1);
+            sum2+= 1/Math.pow(individual.calculateRoute(coordinates),10);
             if(sum2>= random){
                 return individual;
             }

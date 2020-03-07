@@ -57,6 +57,7 @@ public class Individual implements Cloneable {
         for (int i = 0; i < citiesIndexes.size()-1; i++) {
             sum+=tspCoordinates.calculateDistance(citiesIndexes.get(i), citiesIndexes.get(i+1));
         }
+        sum+=tspCoordinates.calculateDistance(citiesIndexes.get(0), citiesIndexes.get(citiesIndexes.size()-1));
         route = sum;
         return sum;
     }

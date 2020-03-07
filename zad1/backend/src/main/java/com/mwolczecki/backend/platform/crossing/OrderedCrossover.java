@@ -15,6 +15,7 @@ public class OrderedCrossover implements CrossingAlgorithm {
             firstIndex = secondIndex;
             secondIndex = temp;
         }
+
         final Individual clone;
         try {
             clone = (Individual) secondIndividual.clone();
