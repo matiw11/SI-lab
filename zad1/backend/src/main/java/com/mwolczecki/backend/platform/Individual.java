@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Individual implements Cloneable {
     public List<Integer> citiesIndexes = new ArrayList<>();
-
+    private double route = -1;
     public static Individual createRandomIndividual(int length) {
         Individual individual = new Individual();
         ArrayList<Integer> temp = new ArrayList<>();
@@ -50,10 +50,14 @@ public class Individual implements Cloneable {
     }
 
     public double calculateRoute(TSPCoordinates tspCoordinates) {
+        if(route!= -1){
+            return route;
+        }
         double sum = 0;
         for (int i = 0; i < citiesIndexes.size()-1; i++) {
             sum+=tspCoordinates.calculateDistance(citiesIndexes.get(i), citiesIndexes.get(i+1));
         }
+        route = sum;
         return sum;
     }
 

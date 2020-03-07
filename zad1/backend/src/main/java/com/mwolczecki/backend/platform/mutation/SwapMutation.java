@@ -15,7 +15,7 @@ public class SwapMutation implements MutationAlogirthm {
         }
         Integer integer = clone.citiesIndexes.get(firstIndex);
         clone.citiesIndexes.set(firstIndex, clone.citiesIndexes.get(secondIndex));
-        clone.citiesIndexes.set(secondIndex, integer);
+        clone.citiesIndexes.set(secondIndex, integer );
         return clone;
     }
 }

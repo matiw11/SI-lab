@@ -5,7 +5,11 @@ import com.mwolczecki.backend.platform.crossing.CycleCrossover;
 import com.mwolczecki.backend.platform.crossing.OrderedCrossover;
 import com.mwolczecki.backend.platform.crossing.PartiallyMatchedCrossover;
 import com.mwolczecki.backend.platform.mutation.InversionMutation;
+import com.mwolczecki.backend.platform.mutation.MutationAlogirthm;
 import com.mwolczecki.backend.platform.mutation.SwapMutation;
+import com.mwolczecki.backend.platform.selection.RouletteSelection;
+import com.mwolczecki.backend.platform.selection.SelectionAlgorithm;
+import com.mwolczecki.backend.platform.selection.TournamentSelection;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -23,11 +27,22 @@ public class TSPParser {
         TSPParser tspParser = new TSPParser();
         TSPCoordinates parse = tspParser.parse("berlin11_modified.tsp");
         int fileType = tspParser.fileType;
+        Individual greedyIndividual1 = Individual.createRandomIndividual(11);
+        System.out.println(greedyIndividual1.citiesIndexes);
+        System.out.println(greedyIndividual1.calculateRoute(parse));
+
+
+        Individual greedyIndividual2 = Individual.createRandomIndividual(11);
+        System.out.println(greedyIndividual2.citiesIndexes);
+        System.out.println(greedyIndividual2.calculateRoute(parse));
         Individual greedyIndividual = Individual.createRandomIndividual(11);
         System.out.println(greedyIndividual.citiesIndexes);
-        SwapMutation inversionMutation = new SwapMutation();
-        Individual mutate = inversionMutation.mutate(greedyIndividual);
-        System.out.println(mutate.citiesIndexes);
+        System.out.println(greedyIndividual.calculateRoute(parse));
+
+        List<Individual> individuals = List.of(greedyIndividual1, greedyIndividual2, greedyIndividual);
+        SelectionAlgorithm algorithm = new RouletteSelection();
+        Individual select = algorithm.select(individuals, parse);
+        System.out.println(select.citiesIndexes);
 
 
     }
