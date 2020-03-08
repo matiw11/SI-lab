@@ -4,6 +4,7 @@ import MyChart from "./MyChart";
 
 class Tsp extends Component {
     state = {
+        evaluations: [],
         fileNames: [],
         crossingAlgorithms: [
             {name: "partially matched crossover", value: "PMX"},
@@ -76,13 +77,16 @@ class Tsp extends Component {
                 <button onClick={this.start}>start</button>
 
 
-                {this.state.evaluations && <MyChart evaluations={this.state.evaluations}/>}
+                {this.state.evaluations && this.state.evaluations.length != 0 &&
+                <MyChart evaluations={this.state.evaluations}/>}
 
             </div>
         );
     }
-    start = () =>{
+
+    start = () => {
         const {state} = this
+        this.setState({isRunning: true})
         axios.post('http://localhost:8080/runProblem', {
             crossingAlgorithm: state.crossingAlgorithm,
             mutationAlgorithm: state.mutationAlgorithm,
@@ -99,7 +103,23 @@ class Tsp extends Component {
                 'Access-Control-Allow-Origin': '*'
             }
         }).then(response => {
-           this.setState({evaluations: response.data})
+            this.setState({evaluations: response.data, isRunning: false})
+        })
+        window.setTimeout(this.updateEvaluations, 50)
+    }
+
+    updateEvaluations = () => {
+        axios.get('http://localhost:8080/evaluations', {
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            }
+        }).then(response => {
+            this.setState({
+                evaluations: response.data
+            }, () => {
+                if (this.state.isRunning)
+                    window.setTimeout(this.updateEvaluations, 100)
+            })
         })
     }
 }

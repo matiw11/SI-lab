@@ -7,7 +7,6 @@ import com.mwolczecki.backend.platform.TSPProblemFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
-import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
@@ -20,9 +19,12 @@ import java.util.stream.Collectors;
 @RequestMapping("/")
 public class Controller {
 
+    TSPProblem tspProblem = new TSPProblem();
+
     @PostMapping("/runProblem")
     public List<Evaluation> runProblem(@RequestBody Map<String, String> map){
         TSPProblem build = TSPProblemFactory.build(map);
+        tspProblem = build;
         List<Evaluation> evaluations = build.run();
         return evaluations;
     }
@@ -38,5 +40,10 @@ public class Controller {
         }
 
         return null;
+    }
+
+    @GetMapping("/evaluations")
+    public List<Evaluation> getEvaluations(){
+        return tspProblem.getEvaluations();
     }
 }

@@ -9,7 +9,9 @@ import com.mwolczecki.backend.platform.selection.SelectionAlgorithm;
 import com.mwolczecki.backend.platform.selection.TournamentSelection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TSPProblem {
     CrossingAlgorithm crossingAlgorithm;
@@ -20,7 +22,7 @@ public class TSPProblem {
     double Px;
     double PM;
     TSPCoordinates tspCoordinates;
-    private List<Evaluation> evaluations = new ArrayList<>();
+    private List<Evaluation> evaluations = new CopyOnWriteArrayList<>();
     Initializer initializer;
 
     public static void main(String[] args) {
@@ -37,9 +39,13 @@ public class TSPProblem {
        // System.out.println(tspProblem.evaluations);
     }
 
+    public List<Evaluation> getEvaluations() {
+            return evaluations;
+
+    }
 
     public List<Evaluation> run() {
-        evaluations = new ArrayList<>();
+        evaluations = new CopyOnWriteArrayList<>();
         List<Individual> population = initialize();
         Evaluation evaluation1 = evaluate(population);
         evaluations.add(evaluation1);
@@ -49,7 +55,7 @@ public class TSPProblem {
             List<Individual> mutatedIndividuals = mutate(crossedIndividuals);
 
             Evaluation evaluate = evaluate(mutatedIndividuals);
-            System.out.println(evaluate);
+           // System.out.println(evaluate);
             evaluations.add(evaluate);
             population = crossedIndividuals;
         }

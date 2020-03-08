@@ -19,8 +19,9 @@ class MyChart extends Component {
 
         })
         const options = {
+            height: 800,
             title: {
-                text: "chart"
+                text: ""
             },
             data: [{
                 name: "min",
@@ -44,7 +45,7 @@ class MyChart extends Component {
 
 
         return (
-            <div>
+            <div >
                 <br/>
                 <CanvasJSChart options={options}/>
             </div>
