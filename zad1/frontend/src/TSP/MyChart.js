@@ -20,6 +20,7 @@ class MyChart extends Component {
         })
         const options = {
             height: 800,
+            zoomEnabled: true,
             title: {
                 text: ""
             },
