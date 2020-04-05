@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07ec99fb-5740-494c-a2ba-aeb8f48eba85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/initializer/Initializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/mutation/MutationAlogirthm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/selection/SelectionAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/aiUtils/Algorithms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/entity/Domain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/entity/Sudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/entity/SudokuVariable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/resetrictions/AreaConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/resetrictions/ColumnConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/resetrictions/Constraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/resetrictions/RowConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/java/com/wouek/back/runner/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../back/src/main/resources/Sudoku.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/wouek/backend/core/CSP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/wouek/backend/core/IntPair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/wouek/backend/core/OrderedValuePIcker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/wouek/backend/core/RandomValuePIcker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/wouek/backend/core/SudokuParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/wouek/backend/core/ValuePicker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/resources/Sudoku.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CSP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zad3/src/pkg1/Kontener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zad3/src/pkg1/Pies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zad3/src/pkg1/Ssak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zad3/src/pkg1/Wyswietlacz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zad3/src/pkg1/Zwierze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/BackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/Evaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/TSPCoordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/TSPCoordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/TSPCoordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/TSPCoordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/TSPParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/TSPParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/TSPProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/TSPProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/TSPProblemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/TSPProblemFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/crossing/CrossingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/crossing/CrossingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/crossing/CycleCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/crossing/CycleCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/crossing/OrderedCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/crossing/OrderedCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/crossing/PartiallyMatchedCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/crossing/PartiallyMatchedCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/initializer/GreedyInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/initializer/GreedyInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/initializer/Initializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/initializer/MixedInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/initializer/MixedInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/initializer/RandomInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/initializer/RandomInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/mutation/InversionMutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/mutation/InversionMutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/mutation/MutationAlogirthm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/mutation/SwapMutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/mutation/SwapMutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/selection/RouletteSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/selection/RouletteSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/selection/SelectionAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/mwolczecki/backend/platform/selection/TournamentSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/main/java/com/kochamWiktorie/backend/platform/selection/TournamentSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../zad1/backend/src/test/java/com/mwolczecki/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../zad1/backend/src/test/java/com/kochamWiktorie/backend/BackendApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ZoS4VAlLO3pqDLl85F4JWrGaez" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07ec99fb-5740-494c-a2ba-aeb8f48eba85" name="Default Changelist" comment="" />
+      <created>1585503762418</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585503762418</updated>
+      <workItem from="1585503766279" duration="3755000" />
+      <workItem from="1585553061859" duration="3462000" />
+      <workItem from="1585683521724" duration="596000" />
+      <workItem from="1585932803621" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1671" height="306" key="GridCell.Tab.0.bottom" timestamp="1585511897421">
+      <screen x="0" y="0" width="1714" height="1113" />
+    </state>
+    <state width="1671" height="306" key="GridCell.Tab.0.bottom/0.0.1714.1113@0.0.1714.1113" timestamp="1585511897421" />
+    <state width="1671" height="306" key="GridCell.Tab.0.center" timestamp="1585511897420">
+      <screen x="0" y="0" width="1714" height="1113" />
+    </state>
+    <state width="1671" height="306" key="GridCell.Tab.0.center/0.0.1714.1113@0.0.1714.1113" timestamp="1585511897420" />
+    <state width="1671" height="306" key="GridCell.Tab.0.left" timestamp="1585511897420">
+      <screen x="0" y="0" width="1714" height="1113" />
+    </state>
+    <state width="1671" height="306" key="GridCell.Tab.0.left/0.0.1714.1113@0.0.1714.1113" timestamp="1585511897420" />
+    <state width="1671" height="306" key="GridCell.Tab.0.right" timestamp="1585511897420">
+      <screen x="0" y="0" width="1714" height="1113" />
+    </state>
+    <state width="1671" height="306" key="GridCell.Tab.0.right/0.0.1714.1113@0.0.1714.1113" timestamp="1585511897420" />
+  </component>
+</project>
